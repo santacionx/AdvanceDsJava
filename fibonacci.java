@@ -36,6 +36,16 @@ public class fibonacci {
         return a[n];
     }
 
+    public static int fibdp(int n, int dp[]) {
+        dp[0] = 0;
+        dp[1] = 1;
+        for (int i = 2; i < dp.length; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
+        return dp[n];
+
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -43,7 +53,8 @@ public class fibonacci {
         for (int i = 0; i < dp.length; i++) {
             dp[i] = -1;
         }
-        System.out.println(fib(n, dp));
-        System.out.println(fibmemoz(n, dp));
+        System.out.println(" memoization approach a " + fib(n, dp));
+        System.out.println(" memoization approach b " + fibmemoz(n, dp));
+        System.out.println("using DP: " + fibdp(n, dp));
     }
 }
