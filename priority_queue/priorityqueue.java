@@ -10,39 +10,34 @@ class node<v> {
     }
 }
 
-public class priorityqueue<k, v> {
+public class priorityqueue<v> {
     // heap array (value, priority)
-    ArrayList<node<k>> heap;
+    ArrayList<node<v>> heap;
 
     public priorityqueue() {
         heap = new ArrayList<>();
     }
 
     public int size() {
-
+        return heap.size();
     }
 
     public boolean isEmpty() {
-
+        return size() == 0;
     }
 
     public void insert(v value) {
 
     }
 
-    public v getMin() {
-
-    }
-
-    public v getMax() {
-
+    public v getMin() throws thereiswong {
+        if (size() == 0) {
+            throw new thereiswong();
+        }
+        return heap.get(0).value;
     }
 
     public v removeMin() {
-
-    }
-
-    public v removeMax() {
 
     }
 
