@@ -1,5 +1,9 @@
 package priority_queue;
 
-public class thereiswong extends Exception {
+import java.util.*;
 
+public class thereiswong extends Exception {
+    catch(Exception e){
+        System.err.println();
+    }
 }
